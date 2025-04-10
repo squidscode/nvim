@@ -33,6 +33,7 @@ vim.keymap.set('n', '<C-w>A', [[:res<Enter>]])
 vim.keymap.set('n', '<localleader>w', [[<C-w>ji]])
 vim.keymap.set('n', '<leader>nw', [[<C-w>n<C-w>T]])
 vim.keymap.set('n', '<leader>nt', [[:term<Enter>]])
+vim.keymap.set('n', '<C-q>', [[<C-w>q]])
 vim.keymap.set(
     'n',
     '<leader>st',

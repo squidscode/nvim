@@ -28,6 +28,8 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+require("hardtime").setup()
+
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
@@ -101,7 +103,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
           end,
         })
     else
-      vim.notify("No dune file found, skipping build.", vim.log.levels.WARN)
+      -- vim.notify("No dune file found, skipping build.", vim.log.levels.WARN)
     end
   end,
 })
+
+require('glow').setup({
+  width = 100,
+  height = 120,
+  width_ratio = 0.9,
+  height_ratio = 0.9
+})
+vim.keymap.set("n", "<leader>gl", [[:Glow<Enter>]])
